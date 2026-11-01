@@ -1,0 +1,43 @@
+{
+  "name": "pocket-vault",
+  "description": "Personal Android vault — Phase 1 UI prototype",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@expo/metro-runtime": "4.0.1",
+    "@expo/vector-icons": "14.0.4",
+    "expo": "52.0.49",
+    "expo-asset": "11.0.5",
+    "expo-clipboard": "7.0.1",
+    "expo-font": "13.0.4",
+    "expo-status-bar": "2.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.76.9",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-web": "0.19.13"
+  },
+  "devDependencies": {
+    "@types/node": "18.19.76",
+    "@types/react": "18.3.12",
+    "tsx": "4.20.6",
+    "typescript": "5.3.3"
+  },
+  "scripts": {
+    "start": "expo start --go",
+    "start:clear": "expo start --go --clear",
+    "start:tunnel": "expo start --go --tunnel",
+    "android": "expo start --go --android",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/vault.test.ts",
+    "check": "npm run typecheck && npm test",
+    "export:android": "expo export --platform android",
+    "export:web": "expo export --platform web"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18.18.0 <19"
+  }
+}
